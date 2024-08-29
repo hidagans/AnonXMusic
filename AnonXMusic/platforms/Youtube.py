@@ -240,7 +240,8 @@ class YouTubeAPI:
         if videoid:
             link = self.base + link
         loop = asyncio.get_running_loop()
-
+        
+        roxy = 'http://purevpn0s13830845:6phsLWXBQEq4MR@prox-sg.pointtoserver.com:10799'
         def audio_dl():
             ydl_optssx = {
                 "format": "bestaudio/best",
@@ -249,6 +250,7 @@ class YouTubeAPI:
                 "nocheckcertificate": True,
                 "quiet": True,
                 "no_warnings": True,
+                "proxy": proxy,
             }
             x = yt_dlp.YoutubeDL(ydl_optssx)
             info = x.extract_info(link, False)
@@ -266,6 +268,7 @@ class YouTubeAPI:
                 "nocheckcertificate": True,
                 "quiet": True,
                 "no_warnings": True,
+                "proxy": proxy,
             }
             x = yt_dlp.YoutubeDL(ydl_optssx)
             info = x.extract_info(link, False)
@@ -287,6 +290,7 @@ class YouTubeAPI:
                 "no_warnings": True,
                 "prefer_ffmpeg": True,
                 "merge_output_format": "mp4",
+                "proxy": proxy,
             }
             x = yt_dlp.YoutubeDL(ydl_optssx)
             x.download([link])
@@ -301,6 +305,7 @@ class YouTubeAPI:
                 "quiet": True,
                 "no_warnings": True,
                 "prefer_ffmpeg": True,
+                "proxy": proxy,
                 "postprocessors": [
                     {
                         "key": "FFmpegExtractAudio",
