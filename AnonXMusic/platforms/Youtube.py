@@ -241,7 +241,7 @@ class YouTubeAPI:
             link = self.base + link
         loop = asyncio.get_running_loop()
         
-        roxy = 'http://purevpn0s13830845:6phsLWXBQEq4MR@prox-sg.pointtoserver.com:10799'
+        roxy = 'http://purevpn0s13830845:6phsLWXBQEq4MR@prox-kr.pointtoserver.com:10799'
         def audio_dl():
             ydl_optssx = {
                 "format": "bestaudio/best",
